@@ -4,7 +4,7 @@
 - [x] Do you have any blockers?
 1. I planned out my game a little more by white boarding the HTML page and understading what elements I need.
 2. Draft the index.html page, and begin styling content
-3. I need to really lean in and define the game logic. That is not coming easy right now because I don't think I'm making asking the right specific questions.
+3. I need to really lean in and define the game logic. That is not coming easy right now because I don't think I'm making asking the right specific questions. ONce I find those, I can code what I need.
 
 # Monday
 - [x] What did you achieve yesterday?
