@@ -1,4 +1,21 @@
-main {
-    background: paleviolet;
+body {
+    font-family:'Courier New', Courier, monospace;
+}
 
+h1, h2, p {
+    text-align: center;
+}
+
+.button {
+    text-align: center;
+}
+
+#game-grid {
+    background-color: lightsteelblue;
+    display: flex;
+    flex-wrap: wrap;
+    height: 800px;
+    width: 90%;
+    margin: 0 auto;
+    border: 2px solid paleturquoise;
 }
