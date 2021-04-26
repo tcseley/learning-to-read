@@ -1,1 +1,2 @@
-console.log("Hello!");
+let cards = []
+

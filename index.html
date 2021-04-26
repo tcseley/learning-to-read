@@ -8,22 +8,27 @@
     <title>Document</title>
 </head>
 <body>
-    <div id="welcome">
-        <header>Memory Game!</header>
-        <div id="gameStart">
-            <div id="gameSelect">
-                <ul>
-                    <li>Easy</li>
-                    <li>Hard</li>
-                </ul>
+    <main>
+        <section class="intro" name="gameSelect">
+            <h1>Memory Game!</h1>
+            <p>Choose your skill level:</p>
+            <button id="easy">Easy</button>
+            <button id="hard">Hard</button>
+            <p><span id="instruction">Instructions</span> Match the cards and get points. Once all matches are found, see if you can beat your time!</p>
+
+
+        </section>
+        <section class="game" name="gamePlay">
+            <h2>Matching Game</h2>
+            <div id="game-stats">
+                <p>Points:</p>
+                <p>Time:</p>
             </div>
-            <div id="image">
-                <img src="https://pbs.twimg.com/profile_images/453339477394464768/6qntO0c8_400x400.jpeg" alt="">
-            </div>     
-
-
-        </div>
-    </div>
+            <div id="game-cards" name="game-board">
+                
+            </div>
+        </section>
+    </main>
     <script src="./app.js"></script>
 </body>
 </html>
