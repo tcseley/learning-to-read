@@ -8,29 +8,73 @@
     <title>Document</title>
 </head>
 <body>
-    <main>
-        <section class="intro">
-            <h1>Memory Game!</h1>
-            <p>Choose your skill level:</p>
-            <button id="easy">Easy</button>
-            <button id="hard">Hard</button>
-            <p><span id="instruction">Instructions</span> Match the cards and get points. Once all matches are found, see if you can beat your time!</p>
-        </section>
-        
-        <section class="game">
-            <h2>Matching Game</h2>
-            
-            <div id="game-stats">
-                
+     -->
+     <!--Start game-->
+     <div class="start-game">
+        <div class="welcome">
+            <div id="title-main"><!--Title-->
+                <h1 id="title">Memory Game</h1>
+            </div id="level">
+            <div><!--Select difficulty-->
+                <div><label for="levelSelect">Choose your difficulty:</label></div>
+                <div>
+                    <button id="level-game1">EASY</button>
+                    <button id="level-game2">HARD</button>
+                </div>
             </div>
-            
-            <div id="game-grid">
-
+        </div>
+     </div>
+     
+     
+     <!--Game play-->
+     <div id="card-container">
+        <div id="row1">
+            <div class="card m1">
+                Card One
             </div>
-        </section>
-    
-    </main>
-    
+            <div class="card">
+                Card Two
+            </div>
+            <div class="card">
+                Card Three
+            </div>
+            <div class="card">
+                Card Four
+            </div>
+        </div>
+        <div id="row2">
+            <div class="card m1">
+                Card One
+            </div>
+            <div class="card">
+                Card Two
+            </div>
+            <div class="card">
+                Card Three
+            </div>
+            <div class="card">
+                Card Four
+            </div>
+        </div>
+        <div id="row3">
+            <div class="card">
+                Card One
+            </div>
+            <div class="card">
+                Card Two
+            </div>
+            <div class="card">
+                Card Three
+            </div>
+            <div class="card">
+                Card Four
+            </div>
+        </div>
+     </div>
+     
+     
+     <!--End game-->
+     <div></div>
     <script src="./app.js"></script>
 </body>
 
