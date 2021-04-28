@@ -5,33 +5,54 @@ body {
 .start-game {
     background-color: lightsteelblue;
     display: flex;
-    height: 50vh;
+    height: 25vh;
     width: auto;
     margin: 20px;
+    visibility: show;
 }
 
 .welcome {
     display: flex;
-
+    margin: 2em;
+    justify-content: center;
 }
 
-.card-container {
+#game-message {
+    text-align: center;
+}
+
+#game-start {
+    padding: .3rem;
+    border: 1px solid black;
+    border-radius: .5rem;
+    width: 80px;
+    background-color: rgb(138, 114, 114);
+    color: ghostwhite;
+}
+
+
+#card-container {
     display: flex;
     flex-direction: column;
+    visibility: show;
+    margin: auto;
     
 }
 
-#row1, #row2, #row3 {
+#row1, #row2, #row3, #row4{
     display: flex;
     justify-content: space-evenly;
 }
 
 .card {
-    padding: 2em;
+    width: 80px;
+    padding: 1.6em;
+    margin: 1rem;
     display: flex;
-    justify-content: space-around;
-    align-items: center
-    min-height: 200px;
+    min-height: 140px;
     border: 1px solid black;    
 }
 
+.endgame {
+    display: hidden;
+}

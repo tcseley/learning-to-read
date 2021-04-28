@@ -3,7 +3,7 @@ let firstClick
 let secondClick
 let score = 0
 
-// console.log(allCards)
+//console.log(allCards)
 
 document.querySelector("#card-container").addEventListener("click", function(e){
     if (firstClick === undefined) {
@@ -16,26 +16,46 @@ document.querySelector("#card-container").addEventListener("click", function(e){
         firstClick = undefined;
         secondClick = undefined;
     }
-})   
+})
 
-// Fisher-Yates shuffle fuction
+const cardData = [
+    {class:"card amp", text:"&AMP;"},
+    {class:"card num", text:"&numero;"},
+    {class:"card cir", text:"&circledR;"},
+    {class:"card para", text:"&para;"},
+    {class:"card quest", text:"&quest;"},
+    {class:"card hat", text:"&Hat;"},
+    {class:"card check", text:"&checkmark;"},
+    {class:"card dot", text:"&ctdot;"},
+    {class:"card amp", text:"&AMP;"},
+    {class:"card num", text:"&numero;"},
+    {class:"card cir", text:"&circledR;"},
+    {class:"card para", text:"&para;"},
+    {class:"card quest", text:"&quest;"},
+    {class:"card hat", text:"&Hat;"},
+    {class:"card check", text:"&checkmark;"},
+    {class:"card dot", text:"&ctdot;"}
+]
+
+// // Fisher-Yates shuffle fuction:
 function shuffle(array) {
-    var m = array.length, t, i;
-    while (m) {
-      i = Math.floor(Math.random() * m--);
-      t = array[m];
-      array[m] = array[i];
-      array[i] = t;
+    let currentIndex = array.length, temporaryValue, randomIndex;
+    while (currentIndex !== 0) {
+      randomIndex = Math.floor(Math.random() * currentIndex--);
+      temporaryValue = array[currentIndex];
+      array[currentIndex] = array[randomIndex];
+      array[randomIndex] = temporaryValue;
     }
-  }
-
     
-    
+    return array;
+};
 
-    // else if (firstClick !== undefined && secondClick !== undefined) {
-    //     firstClick = undefined;
-    //     secondClick = undefined;
-    // }
+console.log(shuffle(cardData))
+
+
+
+
+
 
 
 // function scoreCount() {
@@ -44,6 +64,9 @@ function shuffle(array) {
 //     }
 //     console.log(scoreCount)
 // }
+
+
+
 //write function for card match on line 14
 //what happens next? point?
 //Think about how this is working ... is this true? and then is this true? Line by line, what's happening.
