@@ -46,11 +46,32 @@ function shuffle(array) {
       array[currentIndex] = array[randomIndex];
       array[randomIndex] = temporaryValue;
     }
-    
+    //cardDeck(array);
     return array;
 };
 
 console.log(shuffle(cardData))
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -66,7 +87,7 @@ console.log(shuffle(cardData))
 // }
 
 
-
+//grab the array content and pass it into ...another array?
 //write function for card match on line 14
 //what happens next? point?
 //Think about how this is working ... is this true? and then is this true? Line by line, what's happening.

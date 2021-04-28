@@ -21,28 +21,29 @@ body {
     text-align: center;
 }
 
-#game-start {
+/* #game-start {
     padding: .3rem;
     border: 1px solid black;
     border-radius: .5rem;
     width: 80px;
     background-color: rgb(138, 114, 114);
     color: ghostwhite;
-}
+} */
 
 
 #card-container {
     display: flex;
-    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
     visibility: show;
-    margin: auto;
-    
+    font-family: "Palatino";
 }
 
-#row1, #row2, #row3, #row4{
+
+/* #row1, #row2, #row3, #row4{
     display: flex;
     justify-content: space-evenly;
-}
+} */
 
 .card {
     width: 80px;
