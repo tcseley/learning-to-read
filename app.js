@@ -15,21 +15,35 @@ document.querySelector("#card-container").addEventListener("click", function(e){
         console.log(firstClick.classList["1"] === secondClick.classList["1"])
         firstClick = undefined;
         secondClick = undefined;
-    } 
+    }
+})   
+
+// Fisher-Yates shuffle fuction
+function shuffle(array) {
+    var m = array.length, t, i;
+    while (m) {
+      i = Math.floor(Math.random() * m--);
+      t = array[m];
+      array[m] = array[i];
+      array[i] = t;
+    }
+  }
+
+    
     
 
     // else if (firstClick !== undefined && secondClick !== undefined) {
     //     firstClick = undefined;
     //     secondClick = undefined;
     // }
-})
 
-function scoreCount() {
-    if (firstClick.classList["1"] === secondClick.classList["1"]) {
-        score += 5
-    }
-    console.log(scoreCount)
-}
+
+// function scoreCount() {
+//     if (firstClick.classList["1"] === secondClick.classList["1"]) {
+//         score += 5
+//     }
+//     console.log(scoreCount)
+// }
 //write function for card match on line 14
 //what happens next? point?
 //Think about how this is working ... is this true? and then is this true? Line by line, what's happening.

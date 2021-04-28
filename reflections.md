@@ -18,17 +18,17 @@ Here's images of the white board, drawing out what I want to show.
 - [x] What did you achieve yesterday?
 - [x] What are your goals for today?
 - [x] Do you have any blockers?
-1. RESPONSE
-2. RESPONSE
-3. RESPONSE
+1. Set up and erased everything. Trying ti understand what exactly I want to make.
+2. Just to get something started.
+3. I can't seem to get a functioning template started here; as if, I'm not really sure how I want this game to be portrayed. Continuing to work things out...
 
 # Tuesday
 - [x] What did you achieve yesterday?
 - [x] What are your goals for today?
 - [x] Do you have any blockers?
-1. RESPONSE
-2. RESPONSE
-3. RESPONSE
+1. Set up the html, added a few lines to CSS, and worked out the initial JS logic for clicking and matching cards. Very basic. Click two cards and get a match (if the class is the same), otherwise get a false.
+2. I just want to finsh this things and get some working functionality here.
+3. Having some trouble thinking through this things, and coming up with the game engine. Almost there. I hope. 
 
 # Wednesday
 - [x] What did you achieve yesterday?
