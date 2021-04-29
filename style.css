@@ -20,9 +20,12 @@ body {
     text-align: center;
 }
 
-#start-button {
+#restart {
     margin: 2em;
-    align-content:center ;
+    align-content:center;
+    border: 1px solid black;
+    border-radius: 3em;
+    
 }
 
 .card > span {
@@ -51,6 +54,7 @@ body {
     flex: 0 20%;
     min-height: 270px;
     box-shadow: 10px 11px 11px rgb(0 0 0 / 20%);
+    visibility: visible;
 }
 
 .endgame {
