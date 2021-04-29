@@ -1,41 +1,55 @@
-let allCards = [...document.querySelectorAll(".card")]
-let firstClick
-let secondClick
-let score = 0
+// variables in memory
+let cardContainer = document.querySelector("#card-container");
+let allCards = [];
+let firstClick;
+let secondClick;
 
-//console.log(allCards)
+//Data array for objects:
+let cardData = [
+    {class:"card", text:"&AMP;", key:"amp"},
+    {class:"card", text:"&numero;", key:"numero"},
+    {class:"card", text:"&circledR;", key:"cicle"},
+    {class:"card", text:"&para;", key:"para"},
+    {class:"card", text:"&quest;", key:"quest"},
+    {class:"card", text:"&Hat;", key:"hat"},
+    {class:"card", text:"&checkmark;", key:"check"},
+    {class:"card", text:"&ctdot;", key:"dot"}
+]
 
-document.querySelector("#card-container").addEventListener("click", function(e){
-    if (firstClick === undefined) {
-        console.log("firstClick")
-        firstClick = e.target
-    } else if (firstClick !== undefined && secondClick === undefined) {
+for(let i = 0; i <= 1; i++) { // Looping twice
+   
+    for(let x = 0; x <= cardData.length - 1; x++) {
+        
+        let card = document.createElement('div');
+        card.classList.add(cardData[x].class);
+        card.innerHTML = cardData[x].text;
+        card.setAttribute('data-key', cardData[x].key);
+
+        // add card to page
+        allCards.push(card);
+    }
+}
+
+allCards = shuffle(allCards);
+for(let a = 0; a <= allCards.length - 1; a++) {
+    cardContainer.appendChild(allCards[a]);
+}
+
+//Click events to tell for mathcing pairs
+cardContainer.addEventListener("click", function(event){
+    const key = event.target.hasAttribute('data-key');
+
+    if (firstClick === undefined && key) {
+        console.log("firstClick");
+        firstClick = event.target;
+    } else if (firstClick !== undefined && secondClick === undefined && key && firstClick !== event.target) {
         console.log("secondClick")
-        secondClick = e.target
-        console.log(firstClick.classList["1"] === secondClick.classList["1"])
+        secondClick = event.target.getAttribute('data-key');
+        console.log(firstClick.getAttribute('data-key') === secondClick)
         firstClick = undefined;
         secondClick = undefined;
     }
-})
-
-const cardData = [
-    {class:"card amp", text:"&AMP;"},
-    {class:"card num", text:"&numero;"},
-    {class:"card cir", text:"&circledR;"},
-    {class:"card para", text:"&para;"},
-    {class:"card quest", text:"&quest;"},
-    {class:"card hat", text:"&Hat;"},
-    {class:"card check", text:"&checkmark;"},
-    {class:"card dot", text:"&ctdot;"},
-    {class:"card amp", text:"&AMP;"},
-    {class:"card num", text:"&numero;"},
-    {class:"card cir", text:"&circledR;"},
-    {class:"card para", text:"&para;"},
-    {class:"card quest", text:"&quest;"},
-    {class:"card hat", text:"&Hat;"},
-    {class:"card check", text:"&checkmark;"},
-    {class:"card dot", text:"&ctdot;"}
-]
+});
 
 // // Fisher-Yates shuffle fuction:
 function shuffle(array) {
@@ -43,51 +57,26 @@ function shuffle(array) {
     while (currentIndex !== 0) {
       randomIndex = Math.floor(Math.random() * currentIndex--);
       temporaryValue = array[currentIndex];
-      array[currentIndex] = array[randomIndex];
+      allCards[currentIndex] = array[randomIndex];
       array[randomIndex] = temporaryValue;
     }
-    //cardDeck(array);
-    return array;
+
+   return allCards;
 };
 
-console.log(shuffle(cardData))
 
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// function scoreCount() {
+// function scoreCount()
 //     if (firstClick.classList["1"] === secondClick.classList["1"]) {
 //         score += 5
 //     }
 //     console.log(scoreCount)
 // }
 
-
-//grab the array content and pass it into ...another array?
+//Add score count - runnig totals(?)
+//~~grab the array content and pass it into ...another array?~~
 //write function for card match on line 14
 //what happens next? point?
 //Think about how this is working ... is this true? and then is this true? Line by line, what's happening.
@@ -98,3 +87,6 @@ console.log(shuffle(cardData))
 //display score somewhere readable
 //Instruction to play
 //shuffle cards (Math.random - will this work? Or do I <i>really</i> need an array?)
+//making shuffle function more of an aray passthrough to handle entire array - right now it shuffles each set of eaight
+//after for loop creates dom card elements, appends properties, put that into array
+//
