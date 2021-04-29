@@ -7,20 +7,27 @@ body {
     display: flex;
     height: 25vh;
     width: auto;
-    margin: 20px;
     visibility: show;
 }
 
 .welcome {
     display: flex;
     margin: 2em;
-    justify-content: center;
+    justify-content: flex-start;
 }
 
 #game-message {
     text-align: center;
 }
 
+#start-button {
+    margin: 2em;
+    align-content:center ;
+}
+
+.card > span {
+    visibility: hidden;
+}
 
 #card-container {
     display: flex;
@@ -43,7 +50,7 @@ body {
     box-sizing: border-box;
     flex: 0 20%;
     min-height: 270px;
-    box-shadow: 10px 11px 11px rgb(0 0 0 / 20%);  
+    box-shadow: 10px 11px 11px rgb(0 0 0 / 20%);
 }
 
 .endgame {

@@ -6,14 +6,14 @@ let secondClick;
 
 //Data array for objects:
 let cardData = [
-    {class:"card", text:"&AMP;", key:"amp"},
-    {class:"card", text:"&numero;", key:"numero"},
-    {class:"card", text:"&circledR;", key:"cicle"},
-    {class:"card", text:"&para;", key:"para"},
-    {class:"card", text:"&quest;", key:"quest"},
-    {class:"card", text:"&Hat;", key:"hat"},
-    {class:"card", text:"&checkmark;", key:"check"},
-    {class:"card", text:"&ctdot;", key:"dot"}
+    {class:"card", text:"<span>&AMP;</span>", key:"amp"},
+    {class:"card", text:"<span>&numero;</span>", key:"numero"},
+    {class:"card", text:"<span>&circledR;</span>", key:"cicle"},
+    {class:"card", text:"<span>&para;</span>", key:"para"},
+    {class:"card", text:"<span>&quest;</span>", key:"quest"},
+    {class:"card", text:"<span>&Hat;</span>", key:"hat"},
+    {class:"card", text:"<span>&checkmark;</span>", key:"check"},
+    {class:"card", text:"<span>&ctdot;</span>", key:"dot"}
 ]
 
 for(let i = 0; i <= 1; i++) { // Looping twice
@@ -27,17 +27,25 @@ for(let i = 0; i <= 1; i++) { // Looping twice
 
         // add card to page
         allCards.push(card);
+        
+        
     }
 }
+
 
 allCards = shuffle(allCards);
 for(let a = 0; a <= allCards.length - 1; a++) {
     cardContainer.appendChild(allCards[a]);
+
 }
 
-//Click events to tell for mathcing pairs
+
+
+//Click events to tell for matching pairs
 cardContainer.addEventListener("click", function(event){
     const key = event.target.hasAttribute('data-key');
+    
+    event.target.firstElementChild.setAttribute("style", "visibility: visible;");
 
     if (firstClick === undefined && key) {
         console.log("firstClick");
@@ -45,7 +53,8 @@ cardContainer.addEventListener("click", function(event){
     } else if (firstClick !== undefined && secondClick === undefined && key && firstClick !== event.target) {
         console.log("secondClick")
         secondClick = event.target.getAttribute('data-key');
-        console.log(firstClick.getAttribute('data-key') === secondClick)
+        console.log(firstClick.getAttribute('data-key') === secondClick);
+
         firstClick = undefined;
         secondClick = undefined;
     }
