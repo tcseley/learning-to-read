@@ -1,13 +1,16 @@
-# Title of Game
+# Memory Game
 
-Explanation of the game that was built and the deployed link will go here.
+This memory game uses a match the card concept to play. The player selects a card, and tries to find the matching pair. Unmatched cards are flipped back over, and matched cards stay visible to the end of the game.
+
+Play the [Memory Game](https://tcseley.github.io/matching-game/) here.
 
 # HOW TO PLAY
 
-How to play the game goes here
+The game is easy to begin playing immediately. Click on a card and see the symbol underneath. Try and find the identical symbol on another card. Once all the cards are matched, the game will reset and the cards will be shuffled.
 
 ## Start Up Screen:
-Images of the start up screen go here 
+
+![Start page of the Memory Game](img/Screen Shot 2021-04-30 at 6.42.29 AM.png)
 
 # HOW TO INSTALL
 

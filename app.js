@@ -48,9 +48,7 @@ cardContainer.addEventListener("click", function (event) {
     firstClick !== undefined &&
     secondClick === undefined &&
     key &&
-    firstClick !== event.target
-  ) {
-    //console.log("secondClick");
+    firstClick !== event.target) {
     secondClick = event.target;
     if (firstClick.getAttribute("data-key") === secondClick.getAttribute('data-key')) {
         firstClick = undefined;
