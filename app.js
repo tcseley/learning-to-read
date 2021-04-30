@@ -25,7 +25,6 @@ for (let i = 0; i <= 1; i++) {
     card.classList.add(cardData[x].class);
     card.innerHTML = cardData[x].text;
     card.setAttribute("data-key", cardData[x].key);
-
 //Adding cards to the page
     allCards.push(card);
   }
@@ -40,7 +39,7 @@ for (let a = 0; a <= allCards.length - 1; a++) {
 cardContainer.addEventListener("click", function (event) {
   const key = event.target.hasAttribute("data-key");
   event.target.firstElementChild.classList.add("cardVisible")
-  console.log("firstClick");
+  //console.log("firstClick");
 
   if (firstClick === undefined && key) {
     firstClick = event.target;
