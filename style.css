@@ -3,12 +3,30 @@ body {
 }
 
 .start-game {
-    background-color: lightsteelblue;
     display: flex;
+    background-color: lightsteelblue;
+    align-items: center;
+    justify-items: flex-start;
     height: 25vh;
     width: auto;
     visibility: show;
 }
+
+.end-game {
+    display: flex;
+    flex: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2em;
+    transition: ease-in-out .3s all;
+    visibility: hidden;
+}
+
+.congrats {
+    visibility: visible;
+}
+
 
 .welcome {
     display: flex;
@@ -17,25 +35,29 @@ body {
 }
 
 #game-message {
-    text-align: center;
+    text-align: left;
 }
 
 #restart {
-    margin: 2em;
-    align-content:center;
+    padding: 10px 20px;
     border: 1px solid black;
-    border-radius: 3em;
-    
+    margin: 20px 0 0 0;
+    background-color: cornflowerblue;
 }
 
 .card > span {
     visibility: hidden;
+    pointer-events: none;
+}
+
+.card > span.cardVisible {
+    visibility: visible;
 }
 
 #card-container {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-evenly;
+    justify-content: center;
     visibility: show;
     font-family: "Palatino";
 }
@@ -44,19 +66,16 @@ body {
     width: 80px;
     margin: 1rem;
     display: flex;
-    min-height: 140px;
     border: 1px solid black;
     display: flex;
-    justify-content: center;
-    align-items: center;
     font-size: 4rem;
     box-sizing: border-box;
     flex: 0 20%;
-    min-height: 270px;
     box-shadow: 10px 11px 11px rgb(0 0 0 / 20%);
     visibility: visible;
-}
-
-.endgame {
-    display: hidden;
+    max-width: 100px;
+    height: 140px;
+    line-height: 0;
+    align-items: center;
+    justify-content: center;
 }

@@ -1,5 +1,6 @@
 // variables in memory
-let cardContainer = document.querySelector("#card-container");
+const cardContainer = document.querySelector("#card-container");
+const endGame = document.querySelector(".end-game");
 let allCards = [];
 let firstClick;
 let secondClick;
@@ -17,20 +18,19 @@ let cardData = [
   { class: "card", text: "<span>&ctdot;</span>", key: "dot" },
 ];
 
+//Looping twice to collect 16 cards
 for (let i = 0; i <= 1; i++) {
-  // Looping twice
-
   for (let x = 0; x <= cardData.length - 1; x++) {
     let card = document.createElement("div");
     card.classList.add(cardData[x].class);
     card.innerHTML = cardData[x].text;
     card.setAttribute("data-key", cardData[x].key);
 
-    // add card to page
+//Adding cards to the page
     allCards.push(card);
   }
 }
-
+//Cards get shuffled
 allCards = shuffle(allCards);
 for (let a = 0; a <= allCards.length - 1; a++) {
   cardContainer.appendChild(allCards[a]);
@@ -39,11 +39,10 @@ for (let a = 0; a <= allCards.length - 1; a++) {
 //Click events to tell for matching pairs
 cardContainer.addEventListener("click", function (event) {
   const key = event.target.hasAttribute("data-key");
-
-  event.target.firstElementChild.setAttribute("style", "visibility: visible;");
+  event.target.firstElementChild.classList.add("cardVisible")
+  console.log("firstClick");
 
   if (firstClick === undefined && key) {
-    console.log("firstClick");
     firstClick = event.target;
   } else if (
     firstClick !== undefined &&
@@ -51,29 +50,30 @@ cardContainer.addEventListener("click", function (event) {
     key &&
     firstClick !== event.target
   ) {
-    console.log("secondClick");
-
+    //console.log("secondClick");
     secondClick = event.target;
     if (firstClick.getAttribute("data-key") === secondClick.getAttribute('data-key')) {
         firstClick = undefined;
         secondClick = undefined;
         matchCard++
+        if (matchCard === cardData.length){
+            endGame.classList.add("congrats");
+            setTimeout(() => {
+              window.location.reload();
+            },4000)
+        }
     } else {
         setTimeout(() => {
-            firstClick.firstElementChild.style = "";
-            secondClick.firstElementChild.style = "";
+            firstClick.firstElementChild.classList.remove("cardVisible")
+            secondClick.firstElementChild.classList.remove("cardVisible")
             firstClick = undefined;
             secondClick = undefined;
         },250)
-
     }
-    
-
-
   }
 });
 
-// // Fisher-Yates shuffle fuction:
+//Fisher-Yates shuffle fuction:
 function shuffle(array) {
   let currentIndex = array.length,
     temporaryValue,
@@ -84,29 +84,9 @@ function shuffle(array) {
     allCards[currentIndex] = array[randomIndex];
     array[randomIndex] = temporaryValue;
   }
-
   return allCards;
 }
 
-// function scoreCount()
-//     if (firstClick.classList["1"] === secondClick.classList["1"]) {
-//         score += 5
-//     }
-//     console.log(scoreCount)
-// }
 
-//Add score count - runnig totals(?)
-//~~grab the array content and pass it into ...another array?~~
-//write function for card match on line 14
-//what happens next? point?
-//Think about how this is working ... is this true? and then is this true? Line by line, what's happening.
-//Game engine almost there.
 
-//The journey continues...place true and false statement is winning condition (create as function)
-//then add score to said function
-//display score somewhere readable
-//Instruction to play
-//shuffle cards (Math.random - will this work? Or do I <i>really</i> need an array?)
-//making shuffle function more of an aray passthrough to handle entire array - right now it shuffles each set of eaight
-//after for loop creates dom card elements, appends properties, put that into array
-//
+

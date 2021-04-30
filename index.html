@@ -9,30 +9,21 @@
 </head>
 <body>
      <!--Start game-->
-     <div class="start-game">
+     <div class="start-game"> 
         <div class="welcome">
-            
             <div><!--Select difficulty-->
-                
                 <h1 id="title">Memory Game</h1>
-                
-                <div id="game-message"><label for="levelSelect">Press START to play. <br>Good Luck.</br></label></div>
-                
+                <div id="game-message"><label for="levelSelect">Just play.<br>Good Luck.</br></label></div>
                 <!-- <button id="start-button">START</button> -->
                 <button id="restart" onClick="window.location.reload();">Reload Game</button>
-                
             </div>
         </div>
+        <div class="end-game">Congrats! You won!</div>
      </div>
-     
-     
      <!--Game play-->
      <div id="card-container"></div>
-     
      <!--End game-->
-     <div class="end-game"></div>
-
-    <script src="./app.js"></script>
+     <script src="./app.js"></script>
 </body>
 
 </html>
