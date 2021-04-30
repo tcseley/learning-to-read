@@ -54,3 +54,12 @@ Here's images of the white board, drawing out what I want to show.
 2. RESPONSE
 3. RESPONSE
 
+
+# Final Day 
+1 What HTML, CSS, and or JavaScript skills you learned while building your game?
+I learned more about flexbox than I thought I would. That's a great thing and I'm really thankful about it. As far as JavaScript, I did learn a ton about how to structure a .js file, essentially, and this is coming from a literature major, how to make the page more readable for people. Literate programming.
+
+
+
+2 What's one topic you want to spend more practice on?
+I am going to work through more JavaScript functions. I really need to work through more problems in this area.
