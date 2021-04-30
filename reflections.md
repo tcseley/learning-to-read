@@ -34,9 +34,9 @@ Here's images of the white board, drawing out what I want to show.
 - [x] What did you achieve yesterday?
 - [x] What are your goals for today?
 - [x] Do you have any blockers?
-1. RESPONSE
-2. RESPONSE
-3. RESPONSE
+1. 
+2. Working through the logic of the game, continued.
+3. 
 
 # Thursday
 - [x] What did you achieve yesterday?
